@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trivia</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <header><h1>Trivia Question</h1></header>
+        <p><%- question%>></p>
+        <ol>
+            <% answers.forEach((answer, index) => { %>
+                <li><%- linksToAnswers[index] %></li>
+            <% }); %>
+            %>
+        </ol>
+        <footer>
+            <dl>
+                <dt>Category: </dt>
+                <dd><%- category %></dd>
+                <dt>Difficulty: </dt>
+                <dd><%- difficulty %></dd>
+            </dl>
+        </footer>
+        <p>Wanna try another question?</p>
+        <button onclick="window.location.reload()">Click here</button>
+    </body>
+</html>
